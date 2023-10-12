@@ -31,9 +31,18 @@ const config: Config = {
             transform: "translateX(calc((-42px * 11) + (-16px * 10) - 3px))",
           },
         },
+        type: {
+          "0%": {
+            borderColor: "transparent",
+          },
+          "100%": {
+            borderColor: "#00AAA9",
+          },
+        },
       },
       animation: {
         slider: "slider 10s linear infinite",
+        type: "type 0.4s linear 0.3s 5",
       },
     },
   },

@@ -1,4 +1,6 @@
+import { MotionDiv } from "@lib/motion";
 import { cn } from "@lib/utils";
+import { Variants } from "framer-motion";
 import Link from "next/link";
 
 type ButtonProps = {
@@ -6,6 +8,7 @@ type ButtonProps = {
   title: string;
   href: string;
   target?: "_blank" | "_self";
+  variant?: Variants;
 };
 
 const LinkButton = ({
@@ -13,19 +16,25 @@ const LinkButton = ({
   href,
   title,
   target = "_self",
+  variant,
 }: ButtonProps) => {
   return (
-    <Link
-      href={href}
-      aria-label={title}
+    <MotionDiv
       className={cn(
-        "relative min-w-max text-center overflow-hidden rounded-[5px] border-2 border-cyan px-5 py-3 text-base text-white duration-100 after:absolute after:right-full after:top-0 after:-z-[1] after:h-full after:w-full after:bg-cyan after:duration-200 hover:shadow-hovered-glow hover:after:right-0 md:px-5 md:py-3 md:text-lg",
+        "relative min-w-max text-center overflow-hidden text-base rounded-[5px] text-white duration-100 after:absolute after:right-full after:top-0 after:-z-[1] after:h-full after:w-full after:bg-cyan after:duration-200 hover:shadow-hovered-glow hover:after:right-0 md:text-lg",
         className
       )}
-      target={target}
+      variants={variant}
     >
-      {title}
-    </Link>
+      <Link
+        href={href}
+        aria-label={title}
+        className="px-5 py-3 md:px-5 md:py-3 block border-2 rounded-[5px] border-cyan"
+        target={target}
+      >
+        {title}
+      </Link>
+    </MotionDiv>
   );
 };
 

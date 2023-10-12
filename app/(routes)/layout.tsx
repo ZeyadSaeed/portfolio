@@ -6,6 +6,7 @@ import Blur from "@components/layout/background/Blur";
 import TopNavbarDesktop from "@components/layout/navbar/TopNavbarDesktop";
 import TopNavbarPhone from "@components/layout/navbar/TopNavbarPhone";
 import RightNavbar from "@components/layout/navbar/RightNavbar";
+import Client from "@components/layout/Client";
 
 export const metadata: Metadata = {
   title: "Zeyad Saeed",
@@ -26,8 +27,7 @@ export default function RootLayout({
         <TopNavbarDesktop />
         <TopNavbarPhone />
         <RightNavbar />
-
-        {children}
+        <Client>{children}</Client>
       </body>
     </html>
   );
