@@ -41,7 +41,7 @@ const config: Config = {
         },
       },
       animation: {
-        slider: "slider 10s linear infinite",
+        slider: "slider 5s linear infinite reverse",
         type: "type 0.4s linear 0.3s 5",
       },
     },

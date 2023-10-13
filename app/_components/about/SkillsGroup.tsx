@@ -6,7 +6,7 @@ const SkillsGroup = () => {
       {icons.map((icon) => (
         <div
           key={icon.name}
-          className="group relative h-[46px] opacity-40 duration-300 hover:opacity-100"
+          className="group relative h-[46px] opacity-40 duration-300 hover:opacity-100 pointer-events-auto"
         >
           <div
             className="absolute -top-[42px] left-1/2 hidden min-w-max -translate-x-1/2 rounded-sm bg-white px-2 py-1 text-sm font-bold text-background after:absolute 

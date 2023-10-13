@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .pauseAnimation {
+    animation-play-state: paused;
+  }
+}
+
 body {
   background: black;
   color: white;
