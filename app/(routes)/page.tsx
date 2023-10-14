@@ -17,8 +17,7 @@ const h3Variant: Variants = {
     y: 50,
     opacity: 0,
     transition: {
-      duration: 0.4,
-      delay: 0.3,
+      duration: 0.3,
     },
   },
 };
@@ -35,8 +34,7 @@ const h1Variant = {
     y: 50,
     opacity: 0,
     transition: {
-      duration: 0.4,
-      delay: 0.2,
+      duration: 0.3,
     },
   },
 };
@@ -81,8 +79,7 @@ const roleVariant: Variants = {
     y: 50,
     opacity: 0,
     transition: {
-      duration: 0.4,
-      delay: 0.1,
+      duration: 0.3,
     },
   },
 };
@@ -119,14 +116,14 @@ const buttonVariant = {
     y: 50,
     opacity: 0,
     transition: {
-      duration: 0.4,
+      duration: 0.2,
     },
   },
 };
 
 export default function Home() {
   return (
-    <section className="flex h-sectionFullPhone md:h-sectionFullDesktop flex-col items-center justify-center gap-5 md:gap-6 px-4">
+    <section className="flex overflow-hidden h-sectionFullPhone md:h-sectionFullDesktop flex-col items-center justify-center gap-5 md:gap-6 px-4">
       <div className="flex flex-col items-center justify-center text-white">
         <MotionH3
           variants={h3Variant}
@@ -151,17 +148,15 @@ export default function Home() {
             Saeed
           </MotionSpan>
         </MotionH1>
-        <h1>
-          <MotionSpan
-            variants={roleVariant}
-            className="flex gap-3 overflow-hidden text-bold items-center justify-center text-center text-[max(7vw,34px)] leading-tight md:text-6xl md:leading-[1.15]"
-            aria-label="Full Stack Developer"
-          >
-            <MotionSpan variants={roleChildrenVariant}>Full</MotionSpan>
-            <MotionSpan variants={roleChildrenVariant}>Stack</MotionSpan>
-            <MotionSpan variants={roleChildrenVariant}>Developer</MotionSpan>
-          </MotionSpan>
-        </h1>
+        <MotionH1
+          className="flex gap-3 overflow-hidden text-bold items-center justify-center text-center text-[max(7vw,34px)] leading-tight md:text-6xl md:leading-[1.15]"
+          variants={roleVariant}
+          aria-label="Full Stack Developer"
+        >
+          <MotionSpan variants={roleChildrenVariant}>Full</MotionSpan>
+          <MotionSpan variants={roleChildrenVariant}>Stack</MotionSpan>
+          <MotionSpan variants={roleChildrenVariant}>Developer</MotionSpan>
+        </MotionH1>
       </div>
 
       <LinkButton variant={buttonVariant} href="/about" title="Discover More" />

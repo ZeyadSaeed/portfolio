@@ -17,7 +17,7 @@ const TopNavbarDesktop = () => {
   return (
     <MotionDiv
       initial="hidden"
-      animate="show"
+      animate="visible"
       className="hidden items-center pt-12 md:flex"
     >
       <div className="relative h-[2px] shrink-[10] w-full">

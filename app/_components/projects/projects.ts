@@ -55,3 +55,5 @@ export const projects = [
     image: "",
   },
 ];
+
+export type Project = (typeof projects)[0];

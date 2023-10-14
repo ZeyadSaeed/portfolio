@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@lib/utils";
-import { MotionProps, Variants, motion as m } from "framer-motion";
+import { MotionProps, Variants, m } from "framer-motion";
 
 type ButtonProps = {
   title: string;

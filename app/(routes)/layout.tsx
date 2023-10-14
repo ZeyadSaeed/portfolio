@@ -7,6 +7,7 @@ import TopNavbarDesktop from "@components/layout/navbar/TopNavbarDesktop";
 import TopNavbarPhone from "@components/layout/navbar/TopNavbarPhone";
 import RightNavbar from "@components/layout/navbar/RightNavbar";
 import Client from "@components/layout/Client";
+import LazyMotionClient from "@components/layout/LazyMotionClient";
 
 export const metadata: Metadata = {
   title: "Zeyad Saeed",
@@ -24,10 +25,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <Blur />
         <BgImages />
-        <TopNavbarDesktop />
-        <TopNavbarPhone />
-        <RightNavbar />
-        <Client>{children}</Client>
+        <LazyMotionClient>
+          <TopNavbarDesktop />
+          <TopNavbarPhone />
+          <RightNavbar />
+          <Client>{children}</Client>
+        </LazyMotionClient>
       </body>
     </html>
   );

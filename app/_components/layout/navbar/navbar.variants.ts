@@ -1,5 +1,5 @@
 export const containerVariants = {
-  show: {
+  visible: {
     transition: {
       staggerChildren: 0.2,
       delayChildren: 1,
@@ -15,7 +15,7 @@ export const childrenVariants = {
       y: { stiffness: 1000 },
     },
   },
-  show: {
+  visible: {
     y: 0,
     opacity: 1,
     transition: {
@@ -31,7 +31,7 @@ export const firstLine = {
   hidden: {
     width: "0%",
   },
-  show: {
+  visible: {
     width: "100%",
     transition: {
       duration: 1,
@@ -43,7 +43,7 @@ export const secondLine = {
   hidden: {
     width: "0%",
   },
-  show: {
+  visible: {
     width: "100%",
     transition: {
       duration: 1.5,
@@ -56,7 +56,7 @@ export const thirdLine = {
   hidden: {
     width: "0%",
   },
-  show: {
+  visible: {
     width: "100%",
     transition: {
       duration: 1,
@@ -69,7 +69,7 @@ export const borderLeft = {
   hidden: {
     height: "0px",
   },
-  show: {
+  visible: {
     height: "100%",
     transition: {
       duration: 0.5,
@@ -82,7 +82,7 @@ export const growWidth = {
   hidden: {
     width: "0px",
   },
-  show: {
+  visible: {
     width: "100%",
     transition: {
       duration: 0.5,
@@ -95,7 +95,7 @@ export const borderRight = {
   hidden: {
     height: "0px",
   },
-  show: {
+  visible: {
     height: "100%",
     transition: {
       duration: 0.5,
@@ -108,7 +108,7 @@ export const fade = {
   hidden: {
     opacity: 0,
   },
-  show: {
+  visible: {
     opacity: 1,
     transition: {
       duration: 0.5,
