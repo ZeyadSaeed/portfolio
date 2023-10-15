@@ -1,10 +1,17 @@
 import { MotionDiv } from "@lib/motion";
 import Image from "next/image";
+import { Project } from "./projects";
 
 const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
 const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
 
-const ProjectImage = ({ isFirstRender }: { isFirstRender: boolean }) => {
+const ProjectImage = ({
+  isFirstRender,
+  project,
+}: {
+  isFirstRender: boolean;
+  project: Project;
+}) => {
   const imgVariants = {
     hidden: { WebkitMaskImage: hiddenMask, maskImage: hiddenMask },
     visible: {
@@ -21,9 +28,18 @@ const ProjectImage = ({ isFirstRender }: { isFirstRender: boolean }) => {
   return (
     <MotionDiv
       variants={imgVariants}
-      className="h-[140px] w-full lg:h-[600px] lg:w-[477px] rounded-md bg-white lg:rounded-b-none"
+      className="h-[140px] w-full lg:h-[585px] lg:w-[477px] rounded-md bg-black lg:rounded-b-none relative"
     >
-      {/* <Image src="/astro.svg" width={200} height={200} alt="" /> */}
+      <picture className="absolute inset-0">
+        <source media="(min-width:1024px)" srcSet={project.image.desktop} />
+        <Image
+          src={project.image.phone}
+          fill
+          sizes="100%"
+          className="object-cover"
+          alt=""
+        />
+      </picture>
     </MotionDiv>
   );
 };

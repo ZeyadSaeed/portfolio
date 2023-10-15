@@ -1,5 +1,4 @@
 "use client";
-import React from "@components/about/icons/React";
 import PageTitle from "@components/common/PageTitle";
 import Description from "@components/projects/Description";
 import Pagination from "@components/projects/Pagination";
@@ -27,26 +26,31 @@ export default function Projects() {
 
   return (
     <section className="mx-6 md:mx-16 flex h-sectionFullPhone md:h-sectionFullDesktop md:pt-7 md:mb-0 flex-col items-center justify-start lg:justify-between gap-8 md:gap-10 text-white lg:pt-16">
-      <PageTitle title="Projects" exitDelay={0.2} />
-      <Pagination
-        selectedProject={selectedProject}
-        setSelectedProject={setSelectedProject}
-      />
-      <AnimatePresence mode="wait">
-        <MotionDiv
-          key={selectedProject.id}
-          initial="hidden"
-          animate={isPresent ? "visible" : "exit"}
-          exit="exit"
-          className="flex gap-6 md:gap-11 flex-col lg:flex-row w-full justify-center"
-        >
-          <ProjectImage isFirstRender={firstRender.current} />
-          <Description
-            isFirstRender={firstRender.current}
-            activeProjectId={selectedProject.id}
-          />
-        </MotionDiv>
-      </AnimatePresence>
+      <PageTitle title="Projects" exitDelay={0.3} />
+      <div className="flex flex-col gap-8 justify-center items-center">
+        <Pagination
+          selectedProject={selectedProject}
+          setSelectedProject={setSelectedProject}
+        />
+        <AnimatePresence mode="wait">
+          <MotionDiv
+            key={selectedProject.id}
+            initial="hidden"
+            animate={isPresent ? "visible" : "exit"}
+            exit="exit"
+            className="flex gap-6 md:gap-11 flex-col lg:flex-row w-full justify-center"
+          >
+            <ProjectImage
+              isFirstRender={firstRender.current}
+              project={selectedProject}
+            />
+            <Description
+              isFirstRender={firstRender.current}
+              project={selectedProject}
+            />
+          </MotionDiv>
+        </AnimatePresence>
+      </div>
     </section>
   );
 }

@@ -52,14 +52,16 @@ const PageTitle = ({
   };
 
   return (
-    <MotionH1 className="relative pb-3 text-3xl text-white md:pb-5 md:text-5xl overflow-hidden">
-      <MotionSpan variants={variants} className="block">
-        {title}
-      </MotionSpan>
-      <MotionSpan
-        variants={lineVariants}
-        className="absolute bottom-0 left-0 right-0 h-[2px] w-full bg-cyan shadow-cyan-glow"
-      />
+    <MotionH1 className="relative text-3xl text-white md:text-5xl">
+      <div className="overflow-hidden pb-3 md:pb-5">
+        <MotionSpan variants={variants} className="block">
+          {title}
+        </MotionSpan>
+        <MotionSpan
+          variants={lineVariants}
+          className="absolute bottom-0 left-0 right-0 h-[2px] w-full bg-cyan shadow-cyan-glow"
+        />
+      </div>
     </MotionH1>
   );
 };

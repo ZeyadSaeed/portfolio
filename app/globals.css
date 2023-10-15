@@ -6,6 +6,10 @@
   .pauseAnimation {
     animation-play-state: paused;
   }
+  .justify-distribute {
+    text-justify: distribute;
+    hyphens: auto;
+  }
 }
 
 body {

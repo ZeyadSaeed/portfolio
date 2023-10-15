@@ -1,15 +1,16 @@
 import { MotionP, MotionSpan } from "@lib/motion";
 import { Variants } from "framer-motion";
 
-const aboutMe = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
-  mollitia laborum repellendus reiciendis ipsa inventore minus, fuga cum
-  harum voluptas suscipit architecto est quam dignissimos debitis deleniti
-  sit veritatis temporibus, quaerat dolores ea consectetur. Aspernatur id
-  maxime laborum molestias reprehenderit, tempora eum necessitatibus
-  mollitia sapiente. Exercitationem laudantium obcaecati, expedita, ut
-  alias quisquam nam sequi voluptatibus est porro adipisci, laborum labore
-  veritatis culpa! Optio doloremque ducimus fugit sapiente nisi aut quis
-  sequi expedita minima esse suscipit recusandae. And thats my skills`;
+const aboutMe = `I am Zeyad Saeed, a highly experienced Full Stack Developer with a strong
+passion for building innovative digital solutions. With an extensive
+background in front-end and back-end development, I have a proven track
+record of turning concepts into user-friendly web applications. I am
+extremely committed to staying ahead of industry trends, ensuring that I
+always deliver top quality results. I pride myself on being able to solve
+complex problems with innovative solutions. My approach is to work closely
+with clients, understand their goals and translate their ideas into
+digital reality. This leads to increased online presence and user success.
+That’s my skill set.`;
 
 const containerVariants: Variants = {
   visible: {
@@ -45,7 +46,7 @@ const AboutMe = () => {
     <MotionP
       variants={containerVariants}
       aria-label={aboutMe}
-      className="max-w-[690px] text-sm md:text-base text-justify [word-spacing:-1.4px]"
+      className="max-w-[690px] text-sm md:text-base text-justify justify-distribute "
     >
       {aboutMeArr.map((char, i) => (
         <MotionSpan aria-hidden variants={childrenVariants} key={i}>

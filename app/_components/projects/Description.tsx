@@ -1,19 +1,16 @@
 import Button from "@components/common/Button";
-import { projects } from "./projects";
+import { Project } from "./projects";
 import LinkButton from "@components/common/LinkButton";
 import { MotionDiv, MotionH1, MotionP } from "@lib/motion";
 import { Variants } from "framer-motion";
 
 const Description = ({
-  activeProjectId,
+  project,
   isFirstRender,
 }: {
-  activeProjectId: number;
+  project: Project;
   isFirstRender: boolean;
 }) => {
-  const index = activeProjectId - 1;
-  const codeLink = projects[index].links.code;
-
   const parentVariants: Variants = {
     visible: {
       transition: {
@@ -72,10 +69,10 @@ const Description = ({
       className="flex flex-col gap-4 whitespace-break-spaces md:gap-6 lg:max-w-xl "
     >
       <MotionH1 variants={childrenVariants} className="text-3xl md:text-5xl">
-        {projects[index].title}
+        {project.title}
       </MotionH1>
       <MotionP variants={childrenVariants} className="max-w-xl">
-        {projects[index].description}
+        {project.description}
       </MotionP>
 
       <MotionDiv
@@ -84,23 +81,12 @@ const Description = ({
       >
         <LinkButton
           title="View Site"
-          href={projects[index].links.site}
+          href={project.links.site}
           className="w-full text-sm"
           target="_blank"
         />
-        {codeLink && (
-          <LinkButton
-            title="View Code"
-            href={codeLink}
-            className="w-full text-sm"
-            target="_blank"
-          />
-        )}
 
-        <Button
-          title="View More"
-          className={`w-full text-sm ${codeLink ? "xxs:col-span-2" : ""}`}
-        />
+        <Button title="View More" className={`w-full text-sm`} />
       </MotionDiv>
     </MotionDiv>
   );
