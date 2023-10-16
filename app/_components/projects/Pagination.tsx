@@ -42,7 +42,7 @@ const Pagination = ({ selectedProject, setSelectedProject }: Props) => {
   return (
     <MotionDiv
       variants={paginationVariants}
-      className="flex justify-center gap-2 lg:justify-start"
+      className="flex justify-center gap-2 lg:justify-start flex-wrap"
     >
       {projects.map((project) => (
         <MotionButton

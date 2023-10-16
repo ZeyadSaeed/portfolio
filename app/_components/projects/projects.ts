@@ -1,6 +1,20 @@
 export const projects = [
   {
     id: 1,
+    title: "My Portfolio",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+    links: {
+      site: process.env.SERVER_URL || "",
+      code: null,
+    },
+    image: {
+      phone: "/gb-phone.png",
+      desktop: "/gb.png",
+    },
+  },
+  {
+    id: 2,
     title: "Gboosting",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
@@ -14,7 +28,7 @@ export const projects = [
     },
   },
   {
-    id: 2,
+    id: 3,
     title: "Audiophile Ecommerce",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
@@ -27,7 +41,7 @@ export const projects = [
     },
   },
   {
-    id: 3,
+    id: 4,
     title: "Where in the world",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
@@ -40,7 +54,7 @@ export const projects = [
     },
   },
   {
-    id: 4,
+    id: 5,
     title: "URL shortening",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
@@ -53,7 +67,7 @@ export const projects = [
     },
   },
   {
-    id: 5,
+    id: 6,
     title: "IP address tracker",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
