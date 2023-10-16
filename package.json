@@ -7,19 +7,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "email": "email dev --dir app/_components/emails"
   },
   "dependencies": {
+    "@react-email/components": "^0.0.7",
+    "@react-email/tailwind": "^0.0.8",
     "@react-icons/all-files": "^4.1.0",
     "clsx": "^2.0.0",
     "framer-motion": "^9.0.2",
     "next": "13.5.4",
+    "nodemailer": "^6.9.6",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^1.14.0"
+    "react-email": "^1.9.5",
+    "react-hot-toast": "^2.4.1",
+    "resend": "^1.1.0",
+    "tailwind-merge": "^1.14.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.11",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-transition-group": "^4.4.7",
