@@ -54,11 +54,11 @@ const Skills = () => {
         width={45}
         height={130}
         variants={imgVariants}
-        className="relative z-10 select-none left-3"
+        className="relative z-10 select-none left-3 -mt-10"
         alt="Triangle Right"
       />
 
-      <div className="flex h-[130px] max-w-[calc((42px*11)+(16px*10))] overflow-hidden">
+      <div className="flex h-[190px] -mt-10 max-w-[calc((42px*11)+(16px*10))] overflow-x-hidden">
         <MotionDiv
           onAnimationComplete={() => setInitialSliderFinished(true)}
           variants={sliderVariants}
@@ -76,7 +76,7 @@ const Skills = () => {
         width={45}
         height={130}
         variants={imgVariants}
-        className="relative -scale-x-100 select-none right-3"
+        className="relative -scale-x-100 select-none right-3 -mt-10"
         alt="Triangle Lift"
       />
     </MotionDiv>

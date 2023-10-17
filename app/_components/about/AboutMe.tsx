@@ -1,7 +1,7 @@
 import { MotionP, MotionSpan } from "@lib/motion";
 import { Variants } from "framer-motion";
 
-const aboutMe = `I am Zeyad Saeed, a highly experienced Full Stack Developer with a strong
+const aboutMe = `I am Zeyad Saeed, a highly experienced Full-Stack Developer with a strong
 passion for building innovative digital solutions. With an extensive
 background in front-end and back-end development, I have a proven track
 record of turning concepts into user-friendly web applications. I am
@@ -10,7 +10,7 @@ always deliver top quality results. I pride myself on being able to solve
 complex problems with innovative solutions. My approach is to work closely
 with clients, understand their goals and translate their ideas into
 digital reality. This leads to increased online presence and user success.
-That’s my skill set.`;
+That’s my skills.`;
 
 const containerVariants: Variants = {
   visible: {
