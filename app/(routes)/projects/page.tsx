@@ -26,7 +26,7 @@ export default function Projects() {
 
   return (
     <section className="mx-6 md:mx-16 flex h-sectionFullPhone md:h-sectionFullDesktop md:pt-7 md:mb-0 flex-col items-center justify-start lg:justify-between gap-8 md:gap-10 text-white lg:pt-16">
-      <PageTitle title="Projects" exitDelay={0.3} />
+      <PageTitle title="Projects" />
       <div className="flex flex-col gap-8 justify-center items-center">
         <Pagination
           selectedProject={selectedProject}

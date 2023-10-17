@@ -14,7 +14,7 @@ const Description = ({
   const parentVariants: Variants = {
     visible: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0,
         delayChildren: isFirstRender ? 2.8 : 0,
       },
     },
@@ -51,7 +51,7 @@ const Description = ({
       y: 0,
       transition: {
         duration: 0.4,
-        delay: isFirstRender ? 3.2 : 0.4,
+        delay: isFirstRender ? 2.8 : 0,
       },
     },
     exit: {
