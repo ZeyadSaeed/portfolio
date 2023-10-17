@@ -80,7 +80,8 @@ const RightNavbar = () => {
       <button
         name="UP"
         aria-label="Previous Section"
-        className="opacity-50 hover:opacity-100 disabled:opacity-30 relative hover-description after:content-['Previous']"
+        data-name="Previous"
+        className="opacity-50 hover:opacity-100 disabled:opacity-30 relative hover-description"
         disabled={pathname === "/"}
         onClick={(e) => handleArrowNavigation(e)}
       >
@@ -104,7 +105,7 @@ const RightNavbar = () => {
         <div
           key={link.pathname}
           data-name={link.name}
-          className="flex hover-description after:right-[200%] after:content-[attr(data-name)] relative"
+          className="flex hover-description after:right-[200%] relative"
         >
           <Link
             aria-label={link.pathname}
@@ -121,7 +122,8 @@ const RightNavbar = () => {
       <button
         name="DOWN"
         aria-label="Next Section"
-        className={`opacity-50 hover:opacity-100 disabled:opacity-30 relative hover-description after:content-['Next']`}
+        data-name="Next"
+        className="opacity-50 hover:opacity-100 disabled:opacity-30 relative hover-description"
         disabled={NAV_LINKS[NAV_LINKS.length - 1].pathname === pathname}
         onClick={(e) => handleArrowNavigation(e)}
       >

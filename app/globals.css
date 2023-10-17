@@ -13,7 +13,7 @@
   }
 
   .hover-description::after {
-    @apply text-white p-2 px-4 absolute right-[150%] top-1/2 -translate-y-1/2 w-max bg-background shadow-cyan-glow border-2 border-cyan rounded-md text-sm scale-0 duration-200 origin-right;
+    @apply text-white p-2 px-4 absolute right-[150%] top-1/2 -translate-y-1/2 w-max bg-background shadow-cyan-glow border-2 border-cyan rounded-md text-sm scale-0 duration-200 origin-right content-[attr(data-name)];
   }
 
   .hover-description:hover::after {
