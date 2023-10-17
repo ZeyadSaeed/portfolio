@@ -80,7 +80,7 @@ const RightNavbar = () => {
       <button
         name="UP"
         aria-label="Previous Section"
-        className={`opacity-50 hover:opacity-100 disabled:opacity-30`}
+        className="opacity-50 hover:opacity-100 disabled:opacity-30 relative hover-description after:content-['Previous']"
         disabled={pathname === "/"}
         onClick={(e) => handleArrowNavigation(e)}
       >
@@ -101,22 +101,27 @@ const RightNavbar = () => {
       </button>
 
       {NAV_LINKS.map((link) => (
-        <Link
+        <div
           key={link.pathname}
-          aria-label={link.pathname}
-          href={link.pathname}
-          className={`relative h-[0.875rem] w-[0.875rem] overflow-hidden rounded-full duration-500 ${
-            link.pathname === pathname
-              ? "bg-white"
-              : "bg-white/20 hover:bg-white/40"
-          }`}
-        />
+          data-name={link.name}
+          className="flex hover-description after:right-[200%] after:content-[attr(data-name)] relative"
+        >
+          <Link
+            aria-label={link.pathname}
+            href={link.pathname}
+            className={`relative h-[0.875rem] w-[0.875rem] overflow-hidden rounded-full duration-500 ${
+              link.pathname === pathname
+                ? "bg-white"
+                : "bg-white/20 hover:bg-white/40"
+            }`}
+          />
+        </div>
       ))}
 
       <button
         name="DOWN"
         aria-label="Next Section"
-        className={`opacity-50 hover:opacity-100 disabled:opacity-30`}
+        className={`opacity-50 hover:opacity-100 disabled:opacity-30 relative hover-description after:content-['Next']`}
         disabled={NAV_LINKS[NAV_LINKS.length - 1].pathname === pathname}
         onClick={(e) => handleArrowNavigation(e)}
       >

@@ -6,9 +6,22 @@
   .pauseAnimation {
     animation-play-state: paused;
   }
+
   .justify-distribute {
     text-justify: distribute;
     hyphens: auto;
+  }
+
+  .hover-description::after {
+    @apply text-white p-2 px-4 absolute right-[150%] top-1/2 -translate-y-1/2 w-max bg-background shadow-cyan-glow border-2 border-cyan rounded-md text-sm scale-0 duration-200 origin-right;
+  }
+
+  .hover-description:hover::after {
+    @apply scale-100;
+  }
+
+  .hover-description:hover:disabled::after {
+    @apply scale-0;
   }
 }
 
