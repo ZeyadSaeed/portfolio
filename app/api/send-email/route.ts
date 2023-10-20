@@ -2,7 +2,10 @@ import { z } from "zod";
 import { Resend } from "resend";
 import React from "react";
 import ContactFormEmail from "@components/emails/ContactFormEmail";
-import { SEND_MESSAGE_FAILED, SEND_MESSAGE_SUCCESS } from "@lib/constMessages";
+import {
+  SEND_EMAIL_MESSAGE_FAILED,
+  SEND_EMAIL_MESSAGE_SUCCESS,
+} from "@lib/constMessages";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -68,14 +71,14 @@ export async function POST(req: Request) {
       });
 
       if (emailRes.id) {
-        return sendRes(200, SEND_MESSAGE_SUCCESS, true);
+        return sendRes(200, SEND_EMAIL_MESSAGE_SUCCESS, true);
       } else {
-        return sendRes(500, SEND_MESSAGE_FAILED, false);
+        return sendRes(500, SEND_EMAIL_MESSAGE_FAILED, false);
       }
     } catch (err) {
-      return sendRes(500, SEND_MESSAGE_FAILED, false);
+      return sendRes(500, SEND_EMAIL_MESSAGE_FAILED, false);
     }
   } catch (err) {
-    return sendRes(500, SEND_MESSAGE_FAILED, false);
+    return sendRes(500, SEND_EMAIL_MESSAGE_FAILED, false);
   }
 }

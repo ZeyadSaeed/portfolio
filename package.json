@@ -23,6 +23,7 @@
     "react-email": "^1.9.5",
     "react-hot-toast": "^2.4.1",
     "resend": "^1.1.0",
+    "sharp": "^0.32.6",
     "tailwind-merge": "^1.14.0",
     "zod": "^3.22.4"
   },

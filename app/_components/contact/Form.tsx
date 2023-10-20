@@ -1,6 +1,6 @@
 "use client";
 import Button from "@components/common/Button";
-import { SEND_MESSAGE_FAILED } from "@lib/constMessages";
+import { SEND_EMAIL_MESSAGE_FAILED } from "@lib/constMessages";
 import {
   MotionButton,
   MotionForm,
@@ -79,7 +79,7 @@ const Form = () => {
       }
 
       if (!res.ok) {
-        return toast.error(SEND_MESSAGE_FAILED);
+        return toast.error(SEND_EMAIL_MESSAGE_FAILED);
       }
 
       setName("");
@@ -87,7 +87,7 @@ const Form = () => {
       setMessage("");
       return toast.success(data.message);
     } catch (err) {
-      toast.error(SEND_MESSAGE_FAILED);
+      toast.error(SEND_EMAIL_MESSAGE_FAILED);
     } finally {
       setIsLoading(false);
     }
